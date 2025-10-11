@@ -1,7 +1,9 @@
 package P1;
 
-//uN,Pd is empty means invalid or failed
+//username,password is empty means invalid or Login failed
+
 public class AuthService {
+    
     public String login(String username, String password) {
         if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
             return "Invalid Input";
@@ -14,3 +16,4 @@ public class AuthService {
         return "Login Failed";
     }
 }
+
