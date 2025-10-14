@@ -10,7 +10,7 @@ public class Email {
 
         // Sender's email credentials
         final String username = "srinivas@gmail.com";
-        final String password = "nzamxdabjhwvdtaq"; // Use App Password if using Gmail with 2FA
+        final String password = "hbvajsvglsas"; // Use App Password if using Gmail with 2FA
 
         // Recipient's email
         String toEmail = "sample@gmail.com";
