@@ -1,0 +1,36 @@
+package selenium;
+
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class OpenBrowser {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //wait
+		
+		driver.get("https://www.facebook.com"); //url
+		
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("asdfcdv");
+		
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("dzf");
+	
+		driver.findElement(By.xpath("//button[text()='Log in']")).click();
+		System.out.println(driver.getTitle());
+	
+		//catch the error message
+		WebElement error = driver.findElement(By.xpath("//div[@class='_9ay7']"));
+		System.out.println("error msg :"+error.getText());
+		
+		//close browser
+	driver.quit();
+	
+	}
+	
+}
